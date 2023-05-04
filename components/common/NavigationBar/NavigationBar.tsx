@@ -25,7 +25,7 @@ const NavigationBar: FC<{ defaultValue: TNavigationOptionsID }> = ({
       {isDesktop ? (
         <NavigationBarLarge defaultValue={defaultValue} />
       ) : (
-        <NavigationBarMobile />
+        <NavigationBarMobile defaultValue={defaultValue} />
       )}
     </>
   );
