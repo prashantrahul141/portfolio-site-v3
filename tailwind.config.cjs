@@ -12,7 +12,8 @@ module.exports = {
     extend: {
       colors: {
         'primary-theme': {
-          bg: '#0a192f',
+          bg: '#0c1d37',
+          'bg-50': '#0e2343',
           'cyan-100': '#1df2dd',
           'cyan-200': '#21a6a6',
           'white-50': '#E9EDFB',
@@ -38,6 +39,10 @@ module.exports = {
             'animation-timing-function': 'cubic-bezier(0,0,0.2,1)',
           },
         },
+      },
+
+      boxShadow: {
+        mobileNavBar: '-13px 2px 37px -6px rgba(0,0,0,0.6);',
       },
     },
   },
