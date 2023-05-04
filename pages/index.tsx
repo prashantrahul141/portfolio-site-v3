@@ -1,19 +1,16 @@
 import type { NextPage } from 'next';
-import { useState } from 'react';
+import Link from 'next/link';
 
-const Home: NextPage = () => {
-  const [state, setState] = useState(0);
+const Landing: NextPage = () => {
   return (
-    <>
-      {state}
-      <button
-        onClick={() => {
-          setState((prev) => prev + 1);
-        }}>
-        update
-      </button>
-    </>
+    <div className='flex h-screen w-screen items-center justify-center bg-primary-theme-bg'>
+      <Link href={'/home'}>
+        <button className='rounded border border-primary-theme-white-200 px-2 py-1  font-inconsolata text-xl tracking-wide text-primary-theme-white-100/90 transition-all duration-500 ease-in-out hover:border-primary-theme-white-100 hover:text-primary-theme-white-100'>
+          Explore
+        </button>
+      </Link>
+    </div>
   );
 };
 
-export default Home;
+export default Landing;
