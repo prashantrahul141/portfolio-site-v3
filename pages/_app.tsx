@@ -5,10 +5,18 @@ import { useRouter } from 'next/router';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+
+  const getRouter = () => {
+    if (router.asPath.toLowerCase().includes('home')) {
+      return 0;
+    }
+    return router.asPath;
+  };
+
   return (
-    <AnimatePresence mode='wait'>
+    <AnimatePresence mode='wait' initial={false}>
       <motion.div
-        key={router.route}
+        key={getRouter()}
         initial='initialState'
         animate='animateState'
         exit='exitState'
