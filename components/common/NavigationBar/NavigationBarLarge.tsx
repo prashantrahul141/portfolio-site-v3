@@ -14,7 +14,7 @@ const NavigationBarLarge: FC<{ defaultValue: TNavigationOptionsID }> = ({
 
   return (
     <AnimatePresence>
-      <nav className='flex h-fit w-full items-center text-white'>
+      <nav className='flex h-fit w-full items-center bg-primary-theme-bg/80 text-white backdrop-blur-md'>
         <Link href={'/home'} className='ml-16 aspect-square h-11'>
           <Logo variant='page'></Logo>
         </Link>
