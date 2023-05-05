@@ -7,7 +7,6 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   const getRouter = () => {
-    console.log(router.asPath);
     if (router.asPath.toLowerCase().includes('home')) {
       return 0;
     }
