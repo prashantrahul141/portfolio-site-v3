@@ -15,7 +15,7 @@ const variantsForHex = {
 const variantsForText = {
   preloader: {
     opacity: [0, 1, 1],
-    transition: { duration: 1, delay: 1.8, ease: 'easeInOut' },
+    transition: { duration: 1, delay: 1.9, ease: 'easeInOut' },
   },
   page: {
     opacity: [1, 1, 1],
