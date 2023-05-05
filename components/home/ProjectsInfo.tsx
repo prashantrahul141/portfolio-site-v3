@@ -1,7 +1,8 @@
 import type { FC } from 'react';
 import { motion } from 'framer-motion';
+import type { TRepo, graphqlResponse } from '@/utils/types';
 
-const Repo: FC = () => {
+const Repo: FC<{ repo: TRepo }> = ({ repo }) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
@@ -11,10 +12,12 @@ const Repo: FC = () => {
   );
 };
 
-const ProjectsInfo: FC = () => {
+const ProjectsInfo: FC<{ ghResponse: graphqlResponse }> = ({ ghResponse }) => {
   return (
     <div className='h-screen text-2xl text-white'>
-      <Repo></Repo>
+      {ghResponse.user.pinnedItems.edges.map((repo, index) => {
+        return <Repo key={index} repo={repo}></Repo>;
+      })}
     </div>
   );
 };
