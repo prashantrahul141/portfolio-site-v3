@@ -1,5 +1,8 @@
 import HeadComponent from '@/components/common/HeadComponent';
 import NavigationBar from '@/components/common/NavigationBar/NavigationBar';
+import MainInfo from '@/components/home/MainInfo';
+import ProjectsInfo from '@/components/home/ProjectsInfo';
+
 import type { NextPage } from 'next';
 
 export const getStaticProps = () => {
@@ -12,9 +15,9 @@ const Home: NextPage = () => {
   return (
     <>
       <HeadComponent></HeadComponent>
-      <div className='flex h-screen w-screen items-center justify-center bg-primary-theme-bg'>
-        <NavigationBar defaultValue={0} />
-      </div>
+      <NavigationBar defaultValue={0} />
+      <MainInfo></MainInfo>
+      <ProjectsInfo></ProjectsInfo>
     </>
   );
 };
