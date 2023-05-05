@@ -7,6 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   const getRouter = () => {
+    console.log(router.asPath);
     if (router.asPath.toLowerCase().includes('home')) {
       return 0;
     }
@@ -14,31 +15,31 @@ export default function App({ Component, pageProps }: AppProps) {
   };
 
   return (
-    <AnimatePresence mode='wait'>
-      <motion.div
-        key={getRouter()}
-        initial='initialState'
-        animate='animateState'
-        exit='exitState'
-        transition={{
-          duration: 0.75,
-          ease: 'easeInOut',
-        }}
-        variants={{
-          initialState: {
+    <>
+      <div className='fixed -z-20 h-screen w-screen bg-black'></div>
+      <AnimatePresence mode='wait'>
+        <div className='fixed -z-10 h-screen w-screen bg-primary-theme-bg'></div>
+        <motion.div
+          key={getRouter()}
+          initial={{
             opacity: 0,
             clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-          },
-          animateState: {
+          }}
+          animate={{
             opacity: 1,
             clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-          },
-          exitState: {
+          }}
+          exit={{
             clipPath: 'polygon(50% 0, 50% 0, 50% 100%, 50% 100%)',
-          },
-        }}>
-        <Component {...pageProps} />
-      </motion.div>
-    </AnimatePresence>
+            opacity: 0.7,
+          }}
+          transition={{
+            duration: 1.2,
+            ease: 'easeInOut',
+          }}>
+          <Component {...pageProps} />
+        </motion.div>
+      </AnimatePresence>
+    </>
   );
 }
