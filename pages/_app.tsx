@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
   };
 
   return (
-    <AnimatePresence mode='wait' initial={false}>
+    <AnimatePresence mode='wait'>
       <motion.div
         key={getRouter()}
         initial='initialState'
