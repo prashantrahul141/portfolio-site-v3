@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const variantsForHex = {
   preloader: {
     pathLength: [0, 1, 1],
-    transition: { duration: 1.5, ease: 'easeInOut' },
+    transition: { delay: 1, duration: 1.5, ease: 'easeInOut' },
   },
   page: {
     pathLength: [1, 1, 1],
@@ -15,7 +15,7 @@ const variantsForHex = {
 const variantsForText = {
   preloader: {
     opacity: [0, 1, 1],
-    transition: { duration: 1, delay: 0.8, ease: 'easeInOut' },
+    transition: { duration: 1, delay: 1.8, ease: 'easeInOut' },
   },
   page: {
     opacity: [1, 1, 1],
