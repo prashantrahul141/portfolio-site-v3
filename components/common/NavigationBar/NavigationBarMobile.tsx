@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { navigationOptions } from '@/utils/constantTSX';
 import Link from 'next/link';
 import type { TNavigationOptionsID } from '@/utils/types';
+import LogoSvg from '../logo';
 
 const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
   defaultValue,
@@ -13,13 +14,18 @@ const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
 
   return (
     <>
-      <nav className='flex h-14 w-full items-center justify-center'>
+      <nav className='flex w-full items-center justify-end p-3'>
+        <div className='flex h-full flex-grow items-center justify-start'>
+          <div className='h-12 w-12'>
+            <LogoSvg variant='page'></LogoSvg>
+          </div>
+        </div>
         <button
           className='h-full'
           onClick={() => {
             setOpenMenu(true);
           }}>
-          <OutlineMenu className='h-full text-primary-theme-cyan-100'></OutlineMenu>
+          <OutlineMenu className='h-12 text-primary-theme-cyan-100'></OutlineMenu>
         </button>
       </nav>
 
@@ -39,9 +45,9 @@ const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
       <AnimatePresence>
         {openMenu && (
           <motion.div
-            initial={{ translateX: '100%' }}
-            animate={{ translateX: '21%' }}
-            exit={{ translateX: '130%' }}
+            initial={{ right: '-24rem' }}
+            animate={{ right: '0rem' }}
+            exit={{ right: '-24rem' }}
             transition={{ type: 'spring', bounce: 0.15, duration: 0.38 }}
             className='fixed top-0 z-20 h-screen w-[70vw] bg-primary-theme-bg-50 shadow-mobileNavBar'>
             <div className='flex h-14 w-full items-center justify-end px-8 py-10'>
@@ -73,7 +79,7 @@ const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
                           isActive
                             ? 'text-primary-theme-cyan-100'
                             : 'text-primary-theme-white-100'
-                        } font-inconsolata text-xl tracking-wider`}>
+                        } font-inconsolata text-lg tracking-wider`}>
                         {option.text}
                       </span>
                     </Link>
