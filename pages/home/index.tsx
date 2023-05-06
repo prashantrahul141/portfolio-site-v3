@@ -35,6 +35,7 @@ export const getStaticProps: GetStaticProps<{
   //                 primaryLanguage {
   //                   id
   //                   name
+  //                   color
   //                 }
   //                 description
   //                 url
@@ -99,6 +100,7 @@ export const getStaticProps: GetStaticProps<{
               primaryLanguage: {
                 id: 'MDg6TGFuZ3VhZ2UyODc=',
                 name: 'TypeScript',
+                color: '#3178c6',
               },
               description: 'A Social Media Web App.',
               url: 'https://github.com/prashantrahul141/plex',
@@ -145,6 +147,7 @@ export const getStaticProps: GetStaticProps<{
               primaryLanguage: {
                 id: 'MDg6TGFuZ3VhZ2UyODc=',
                 name: 'TypeScript',
+                color: '#3178c6',
               },
               description: 'A to do app made using the t3 stack.',
               url: 'https://github.com/prashantrahul141/t3-todo',
@@ -191,6 +194,7 @@ export const getStaticProps: GetStaticProps<{
               primaryLanguage: {
                 id: 'MDg6TGFuZ3VhZ2UyODc=',
                 name: 'TypeScript',
+                color: '#3178c6',
               },
               description: 'Server code for PlayInSync.',
               url: 'https://github.com/prashantrahul141/PlayInSync-Server',
@@ -237,6 +241,7 @@ export const getStaticProps: GetStaticProps<{
               primaryLanguage: {
                 id: 'MDg6TGFuZ3VhZ2UxNDA=',
                 name: 'JavaScript',
+                color: '#f1e05a',
               },
               description: 'Client code for PlayInSync.',
               url: 'https://github.com/prashantrahul141/PlayInSync-Client',
@@ -283,6 +288,7 @@ export const getStaticProps: GetStaticProps<{
               primaryLanguage: {
                 id: 'MDg6TGFuZ3VhZ2UxNDU=',
                 name: 'Python',
+                color: '#3572A5',
               },
               description: 'A library to add effects to your images.',
               url: 'https://github.com/prashantrahul141/ImageEffects',
@@ -329,6 +335,7 @@ export const getStaticProps: GetStaticProps<{
               primaryLanguage: {
                 id: 'MDg6TGFuZ3VhZ2UyODc=',
                 name: 'TypeScript',
+                color: '#3178c6',
               },
               description:
                 'A Simple Blogging App made with NEXTJS, TypeScript, MongoDB and plain CSS.',
