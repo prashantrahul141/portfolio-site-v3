@@ -13,7 +13,7 @@ const Landing: NextPage = () => {
   return (
     <>
       <HeadComponent></HeadComponent>
-      <div className='flex h-screen w-screen flex-col items-center justify-center gap-12 bg-primary-theme-bg'>
+      <div className='flex h-screen w-screen flex-col items-center justify-center gap-12 bg-black'>
         <div className=''>
           <div className='h-20 w-20'>
             <Logo variant='preloader'></Logo>

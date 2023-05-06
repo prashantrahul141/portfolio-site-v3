@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <div className='fixed -z-20 h-screen w-screen bg-black'></div>
+      <div className='fixed -z-20 h-screen w-screen bg-primary-theme-bg'></div>
       <AnimatePresence mode='wait'>
         <div className='fixed -z-10 h-screen w-screen bg-primary-theme-bg'></div>
         <motion.div
