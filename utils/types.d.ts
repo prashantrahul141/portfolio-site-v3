@@ -17,6 +17,7 @@ interface TRepo {
     primaryLanguage: {
       id: string;
       name: string;
+      color: string;
     };
     description: string;
     url: string;
