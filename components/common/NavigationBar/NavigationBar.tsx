@@ -1,6 +1,5 @@
 import type { FC } from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+
 import NavigationBarLarge from './NavigationBarLarge';
 import NavigationBarMobile from './NavigationBarMobile';
 import type { TNavigationOptionsID } from '@/utils/types';
@@ -8,26 +7,15 @@ import type { TNavigationOptionsID } from '@/utils/types';
 const NavigationBar: FC<{ defaultValue: TNavigationOptionsID }> = ({
   defaultValue,
 }) => {
-  const [isDesktop, setDesktop] = useState(true);
-
-  useEffect(() => {
-    const updateMedia = () => {
-      setDesktop(window.innerWidth > 640);
-    };
-
-    updateMedia();
-    window.addEventListener('resize', updateMedia);
-    return () => window.removeEventListener('resize', updateMedia);
-  }, []);
-
   return (
-    <div className='fixed left-0 top-0 z-10 w-screen'>
-      {isDesktop ? (
+    <>
+      <div className='fixed left-0 top-0 z-10 hidden w-screen sm:block'>
         <NavigationBarLarge defaultValue={defaultValue} />
-      ) : (
+      </div>
+      <div className='fixed left-0 top-0 z-10 w-screen sm:hidden'>
         <NavigationBarMobile defaultValue={defaultValue} />
-      )}
-    </div>
+      </div>
+    </>
   );
 };
 export default NavigationBar;
