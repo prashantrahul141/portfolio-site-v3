@@ -14,7 +14,7 @@ const ContactInfo: FC = () => {
       initial={{ opacity: 0, y: 25 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1, delay: 0.5 }}
+      transition={{ duration: 1.2, delay: 0.8 }}
       className='flex min-h-screen items-center justify-center text-white'>
       <div className='w-full max-w-5xl px-8'>
         <div className='mb-4 sm:mb-8'>
