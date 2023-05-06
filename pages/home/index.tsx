@@ -7,6 +7,7 @@ import { env } from '@/env.mjs';
 
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import type { graphqlResponse } from '@/utils/types';
+import ContactInfo from '@/components/home/ContactInfo';
 
 export const getStaticProps: GetStaticProps<{
   ghResponse: graphqlResponse;
@@ -365,6 +366,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       <NavigationBar defaultValue={0} />
       <MainInfo></MainInfo>
       <ProjectsInfo ghResponse={ghResponse}></ProjectsInfo>
+      <ContactInfo></ContactInfo>
     </>
   );
 };
