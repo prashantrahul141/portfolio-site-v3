@@ -5,9 +5,10 @@ const MainInfo: FC = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 25 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.4, delay: 0.4, ease: 'easeInOut' }}
-      className='flex h-screen items-center justify-center'>
+      className='flex min-h-screen items-center justify-center'>
       <div className='flex w-full max-w-5xl flex-col gap-2 px-8 md:gap-4'>
         <div>
           <p className='font-inconsolata text-base text-primary-theme-cyan-100 sm:text-lg'>
