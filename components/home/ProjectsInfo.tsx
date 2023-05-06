@@ -11,8 +11,8 @@ const Repo: FC<{ repo: TRepo; index: number }> = ({ repo, index }) => {
       initial={{ opacity: 0, y: 25 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1, delay: index / 10 }}
-      className='group min-w-full max-w-[30rem] rounded-md bg-primary-theme-bg-50 p-7 transition-colors duration-500 hover:bg-primary-theme-bg-40'>
+      transition={{ duration: 0.4, delay: index / 10 }}
+      className='group min-w-full max-w-[30rem] rounded-md bg-primary-theme-bg-50 px-5 py-7 transition-colors duration-300 hover:bg-primary-theme-bg-40 sm:px-7'>
       <Link href={currentRepo.url} passHref={true} target='_blank'>
         <div>
           <h1 className='flex items-center gap-2'>
@@ -26,7 +26,7 @@ const Repo: FC<{ repo: TRepo; index: number }> = ({ repo, index }) => {
         </div>
 
         <div className='h-full pb-8 pl-1 pt-[.3rem]'>
-          <p className='font-sans text-sm text-primary-theme-white-100 transition-colors duration-500 group-hover:text-primary-theme-white-100 sm:text-primary-theme-white-100/70'>
+          <p className='font-sans text-sm tracking-wide text-primary-theme-white-100 transition-colors duration-500 group-hover:text-primary-theme-white-100 sm:text-primary-theme-white-100/70'>
             {currentRepo.description}
           </p>
         </div>
@@ -49,9 +49,14 @@ const Repo: FC<{ repo: TRepo; index: number }> = ({ repo, index }) => {
 
 const ProjectsInfo: FC<{ ghResponse: graphqlResponse }> = ({ ghResponse }) => {
   return (
-    <div className='flex min-h-screen items-center justify-center text-white'>
-      <div className='w-full max-w-5xl px-8'>
-        <div className='mb-12 '>
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className='flex min-h-screen items-center justify-center text-white'>
+      <div className='w-full max-w-5xl px-4 sm:px-8'>
+        <div className='mb-5 sm:mb-12'>
           <span className=' font-archivo-narrow text-3xl text-primary-theme-white-100 sm:text-6xl'>
             Projects I&apos;ve built
           </span>
@@ -62,7 +67,7 @@ const ProjectsInfo: FC<{ ghResponse: graphqlResponse }> = ({ ghResponse }) => {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
