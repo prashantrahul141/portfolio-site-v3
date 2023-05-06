@@ -35,6 +35,7 @@ const NavigationBarLarge: FC<{ defaultValue: TNavigationOptionsID }> = ({
                 }}>
                 {activeTab === option.id && (
                   <motion.span
+                    key={'navBarLarge'}
                     layoutId='bubble'
                     className='absolute inset-0 z-10 rounded-sm border-b-2 border-b-primary-theme-cyan-100/90 bg-transparent'
                     transition={{ type: 'spring', bounce: 0.3, duration: 0.35 }}

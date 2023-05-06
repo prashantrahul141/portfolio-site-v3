@@ -8,7 +8,7 @@ import type { TNavigationOptionsID } from '@/utils/types';
 const NavigationBar: FC<{ defaultValue: TNavigationOptionsID }> = ({
   defaultValue,
 }) => {
-  const [isDesktop, setDesktop] = useState(false);
+  const [isDesktop, setDesktop] = useState(true);
 
   useEffect(() => {
     const updateMedia = () => {

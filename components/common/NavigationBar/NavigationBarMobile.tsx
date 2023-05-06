@@ -31,6 +31,7 @@ const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
 
       {openMenu && (
         <motion.div
+          key={'navbarMobile'}
           onClick={() => {
             setOpenMenu(false);
           }}
@@ -45,6 +46,7 @@ const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
       <AnimatePresence>
         {openMenu && (
           <motion.div
+            key={'navbarMobileMenu'}
             initial={{ right: '-24rem' }}
             animate={{ right: '0rem' }}
             exit={{ right: '-24rem' }}
