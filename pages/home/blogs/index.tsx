@@ -17,7 +17,7 @@ const Blogs: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   return (
     <>
       <HeadComponent pageTitle='Blogs'></HeadComponent>
-      <div className='min-w-screen flex min-h-screen items-center justify-center bg-primary-theme-bg pt-16'>
+      <div className='min-w-screen flex min-h-screen items-start justify-center bg-primary-theme-bg pt-16'>
         <NavigationBar defaultValue={1} />
         <BlogsList blogs={blogs}></BlogsList>
       </div>
