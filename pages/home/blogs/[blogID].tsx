@@ -8,6 +8,9 @@ import type {
 } from 'next';
 import type { TBlog } from '@/utils/types';
 import type { IParamsBlog } from '@/utils/types';
+import HeadComponent from '@/components/common/HeadComponent';
+import NavigationBar from '@/components/common/NavigationBar/NavigationBar';
+import BlogView from '@/components/blogs/BlogView';
 
 export const getStaticPaths: GetStaticPaths = () => {
   const paths = blogsJson.blogs.map((blog) => {
@@ -37,7 +40,17 @@ export const getStaticProps: GetStaticProps<{ blog: TBlog }> = (
 const BlogPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   blog,
 }) => {
-  return <>{blog.Subtext}</>;
+  return (
+    <>
+      <HeadComponent pageTitle='Blogs'></HeadComponent>
+      <div className='min-w-screen flex min-h-screen items-start justify-center bg-primary-theme-bg pt-20 sm:pt-24'>
+        <NavigationBar defaultValue={1} />
+        <div className='w-full max-w-5xl border px-2'>
+          <BlogView blog={blog}></BlogView>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default BlogPage;
