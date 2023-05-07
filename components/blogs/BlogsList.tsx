@@ -46,7 +46,7 @@ const BlogsList: FC<{ blogs: Array<TBlog> }> = ({ blogs }) => {
       transition={{ duration: 0.4, delay: 0.4, ease: 'easeInOut' }}
       className='w-full max-w-5xl px-2 pt-8'>
       <div className='mb-8 px-2 sm:mb-8 sm:px-0'>
-        <span className='font-archivo-narrow text-3xl text-primary-theme-white-100 sm:text-6xl'>
+        <span className='font-archivo-narrow text-3xl text-primary-theme-white-100 sm:text-4xl lg:text-5xl xl:text-6xl'>
           Some blogs I have posted
         </span>
       </div>
