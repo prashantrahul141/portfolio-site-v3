@@ -9,10 +9,10 @@ const NavigationBar: FC<{ defaultValue: TNavigationOptionsID }> = ({
 }) => {
   return (
     <>
-      <div className='fixed left-0 top-0 z-10 hidden w-screen sm:block'>
+      <div className='fixed left-0 top-0 z-10 hidden w-screen select-none sm:block'>
         <NavigationBarLarge defaultValue={defaultValue} />
       </div>
-      <div className='fixed left-0 top-0 z-10 w-screen sm:hidden'>
+      <div className='fixed left-0 top-0 z-10 w-screen select-none sm:hidden'>
         <NavigationBarMobile defaultValue={defaultValue} />
       </div>
     </>
