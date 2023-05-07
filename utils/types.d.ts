@@ -1,3 +1,5 @@
+import type { ParsedUrlQuery } from 'querystring';
+
 type TNavigationOptionsID = 0 | 1 | 2;
 
 interface TRepo {
@@ -37,4 +39,16 @@ interface graphqlResponse {
   };
 }
 
-export { TNavigationOptionsID, graphqlResponse, TRepo };
+interface TBlog {
+  id: string;
+  Title: string;
+  Date: string;
+  File: string;
+  Subtext: string;
+}
+
+interface IParamsBlog extends ParsedUrlQuery {
+  blogID: string;
+}
+
+export { TNavigationOptionsID, graphqlResponse, TRepo, TBlog, IParamsBlog };
