@@ -34,7 +34,7 @@ const ContactInfo: FC = () => {
           <Link
             href={'https://github.com/prashantrahul141'}
             passHref={true}
-            className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-2 hover:text-primary-theme-cyan-100'
+            className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-[.20rem] hover:text-primary-theme-cyan-100'
             target='_blank'>
             <span>
               <FillGithubIcon></FillGithubIcon>
@@ -44,7 +44,7 @@ const ContactInfo: FC = () => {
           <Link
             href={'https://www.linkedin.com/in/prashantrahul141/'}
             passHref={true}
-            className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-2 hover:text-primary-theme-cyan-100'
+            className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-[.20rem] hover:text-primary-theme-cyan-100'
             target='_blank'>
             <span>
               <FillLinkedInIcon></FillLinkedInIcon>
@@ -54,7 +54,7 @@ const ContactInfo: FC = () => {
           <Link
             href={'https://twitter.com/prashrahul141'}
             passHref={true}
-            className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-2 hover:text-primary-theme-cyan-100'
+            className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-[.20rem] hover:text-primary-theme-cyan-100'
             target='_blank'>
             <span>
               <FillTwitterIcon></FillTwitterIcon>
@@ -64,7 +64,7 @@ const ContactInfo: FC = () => {
           <Link
             href={'https://instagram.com/prashantrahul141'}
             passHref={true}
-            className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-2 hover:text-primary-theme-cyan-100'
+            className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-[.20rem] hover:text-primary-theme-cyan-100'
             target='_blank'>
             <span>
               <FillInstagramIcon></FillInstagramIcon>
