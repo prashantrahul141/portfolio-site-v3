@@ -23,7 +23,7 @@ const ContactInfo: FC = () => {
           </span>
         </div>
 
-        <div className='w-full max-w-lg'>
+        <div className='w-full max-w-lg px-0 sm:px-2'>
           <span className='font-sans tracking-wide text-primary-theme-white-200'>
             Although I&apos;m currently a student and not looking for any long
             term commitment other than small projects, my inbox is always open!
