@@ -3,7 +3,6 @@ import type { FC } from 'react';
 
 const FullImageView: FC<{
   image: string;
-  callBackFn: (target: null | string) => void;
 }> = ({ image }) => {
   return (
     <motion.img
