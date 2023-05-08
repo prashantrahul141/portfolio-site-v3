@@ -1,9 +1,7 @@
 import { months } from '@/utils/constants';
 import type { TBlog } from '@/utils/types';
 import type { FC } from 'react';
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
-import rehypeRaw from 'rehype-raw';
-import remarkGfm from 'remark-gfm';
+import BlogViewRenderMarkdown from './BlogViewRenderMarkdown';
 
 const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
   const date = new Date(blog.Date);
@@ -23,12 +21,8 @@ const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
       </div>
 
       <div className='px-2'>
-        <ReactMarkdown
-          rehypePlugins={[rehypeRaw]}
-          remarkPlugins={[remarkGfm]}
-          components={{}}>
-          {blog.fileContent}
-        </ReactMarkdown>
+        <BlogViewRenderMarkdown
+          markdown={blog.fileContent}></BlogViewRenderMarkdown>
       </div>
     </div>
   );
