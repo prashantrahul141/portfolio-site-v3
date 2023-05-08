@@ -1,7 +1,6 @@
 import { months } from '@/utils/constants';
 import type { TBlog } from '@/utils/types';
 import type { FC } from 'react';
-import BlogViewRenderMarkdown from './BlogViewRenderMarkdown';
 
 const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
   const date = new Date(blog.Date);
@@ -20,10 +19,7 @@ const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
         </span>
       </div>
 
-      <div className='px-2'>
-        <BlogViewRenderMarkdown
-          markdown={blog.fileContent}></BlogViewRenderMarkdown>
-      </div>
+      <div className='px-2'></div>
     </div>
   );
 };
