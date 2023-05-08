@@ -6,8 +6,9 @@ import path from 'path';
 import { motion } from 'framer-motion';
 import fsPromises from 'fs/promises';
 import FullImageView from '@/components/gallery/FullImageView';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import { useHashRouteToggle } from '@/hooks/HashRouteToggle';
 
 export const getStaticProps: GetStaticProps<{
   filesPath: Array<{ original: string }>;
@@ -26,16 +27,10 @@ export const getStaticProps: GetStaticProps<{
 const Gallery: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   filesPath,
 }) => {
-  const [fullImage, setFullImage] = useState<null | string>(null);
-
-  useEffect(() => {
-    window.onpopstate = function () {
-      if (fullImage) {
-        setFullImage(null);
-        window.history.forward();
-      }
-    };
-  }, [fullImage]);
+  const [fullImage, setFullImage] = useState<string>(
+    filesPath[0].original || '1'
+  );
+  const [isActive, toggleActive] = useHashRouteToggle('#image');
 
   return (
     <>
@@ -44,27 +39,22 @@ const Gallery: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <NavigationBar defaultValue={2} />
         <GalleryImageList
           filesPath={filesPath}
-          callBackFn={(target: null | string) => {
+          callBackFn={(target: string) => {
             setFullImage(target);
+            toggleActive(true);
           }}></GalleryImageList>
         <AnimatePresence>
-          {fullImage && (
-            <FullImageView
-              image={fullImage}
-              callBackFn={(target: null | string) => {
-                setFullImage(target);
-              }}></FullImageView>
-          )}
+          {isActive && <FullImageView image={fullImage}></FullImageView>}
         </AnimatePresence>
         <AnimatePresence>
-          {fullImage && (
+          {isActive && (
             <motion.div
               className='fixed left-0 top-0 z-10 h-screen w-screen bg-primary-theme-bg/80 backdrop-blur-md'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => {
-                setFullImage(null);
+                toggleActive(false);
               }}
               transition={{ duration: 0.2, ease: 'easeInOut' }}></motion.div>
           )}
