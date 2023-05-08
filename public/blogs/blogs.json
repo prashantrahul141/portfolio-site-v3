@@ -2,45 +2,10 @@
   "blogs": [
     {
       "id": "0",
-      "Title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      "Subtext": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
-      "Date": "2011-10-10",
+      "Title": "Why Next.js is the best javascript framework to ever exist?",
+      "Subtext": "Why even with a lot of javascript frameworks to choose from, Next.js is the best one.",
+      "Date": "2023-05-08",
       "File": "blogs1.html"
-    },
-    {
-      "id": "1",
-      "Title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
-      "Subtext": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-      "Date": "2011-10-11",
-      "File": "blogs2.html"
-    },
-    {
-      "id": "2",
-      "Title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      "Subtext": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
-      "Date": "2011-10-10",
-      "File": "blogs1.html"
-    },
-    {
-      "id": "3",
-      "Title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
-      "Subtext": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-      "Date": "2011-10-11",
-      "File": "blogs2.html"
-    },
-    {
-      "id": "4",
-      "Title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      "Subtext": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
-      "Date": "2011-10-10",
-      "File": "blogs1.html"
-    },
-    {
-      "id": "5",
-      "Title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
-      "Subtext": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-      "Date": "2011-10-11",
-      "File": "blogs2.html"
     }
   ]
 }
