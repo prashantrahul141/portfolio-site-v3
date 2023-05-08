@@ -1,6 +1,7 @@
 import { months } from '@/utils/constants';
 import type { TBlog } from '@/utils/types';
 import type { FC } from 'react';
+import JsxParser from 'jsx-parser-react';
 
 const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
   const date = new Date(blog.Date);
@@ -19,7 +20,11 @@ const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
         </span>
       </div>
 
-      <div className='px-2'></div>
+      <div className='flex items-center justify-center px-2'>
+        {/* 
+// @ts-expect-error: Type Error, return type isnt updated in the package. */}
+        <JsxParser jsx={blog.fileContent} />
+      </div>
     </div>
   );
 };
