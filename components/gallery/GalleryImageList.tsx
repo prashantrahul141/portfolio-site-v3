@@ -11,10 +11,19 @@ const GalleryImageList: FC<{
   const ArrayChunks = chunkArrayInGroups<{ original: string }>(filesPath, 3);
 
   return (
-    <div className='max-w-5xl'>
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.4,
+        delay: 0.2,
+        ease: 'easeInOut',
+      }}
+      className='max-w-5xl'>
       <div className='mb-8 px-2 sm:mb-8 sm:px-2 xl:px-0'>
         <span className='font-archivo-narrow text-3xl text-primary-theme-white-100 sm:text-4xl lg:text-5xl xl:text-6xl'>
-          Some photos which I have clicked
+          Some photos which I have taken
         </span>
       </div>
 
@@ -42,7 +51,7 @@ const GalleryImageList: FC<{
                     className=''
                     key={`${chunkIndex}${imageIndex}`}>
                     <img
-                      className='h-full w-full rounded-md border border-primary-theme-white-200/50 object-contain sm:border-primary-theme-white-200/30 md:rounded-xl'
+                      className='h-full w-full rounded-md border border-primary-theme-white-200/50 object-cover sm:border-primary-theme-white-200/30 md:rounded-xl'
                       src={eachImage.original}
                       alt='Image'></img>
                   </motion.div>
@@ -52,7 +61,7 @@ const GalleryImageList: FC<{
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
