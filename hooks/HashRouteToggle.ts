@@ -6,11 +6,7 @@ export const useHashRouteToggle = (
   const [isOpen, toggleOpen] = useState<boolean>(false);
 
   const toggleActive = (open: boolean) => {
-    if (open) {
-      window.location.assign(modalHash);
-    } else {
-      window.location.replace('#');
-    }
+    open ? window.location.assign(modalHash) : window.location.replace('#');
   };
 
   useEffect(() => {
