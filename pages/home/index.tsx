@@ -15,7 +15,7 @@ export const getStaticProps: GetStaticProps<{
 }> = async () => {
   const ghResponse: graphqlResponse = await graphql(GRAPH_QL_QUERY, {
     headers: {
-      authorization: `bearer ${env.GITHUB_GRAPHQL_API_KEY}`,
+      authorization: `bearer ${env._GITHUB_GRAPHQL_API_KEY}`,
     },
   });
 

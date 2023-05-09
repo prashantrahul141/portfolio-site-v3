@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
 const schema = z.object({
-  GITHUB_GRAPHQL_API_KEY: z.string(),
+  _GITHUB_GRAPHQL_API_KEY: z.string(),
 });
 
 const expectedEnv = {
-  GITHUB_GRAPHQL_API_KEY: process.env.GITHUB_GRAPHQL_API_KEY,
+  GITHUB_GRAPHQL_API_KEY: process.env._GITHUB_GRAPHQL_API_KEY,
 };
 
 const _env = schema.safeParse(expectedEnv);
