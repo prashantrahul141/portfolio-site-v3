@@ -16,7 +16,7 @@ export const getStaticProps: GetStaticProps<{
   const dirPath = path.join(process.cwd(), 'public', 'gallery-images');
   const files = await fsPromises.readdir(dirPath);
   const filesPath = files.map((file) => {
-    return { original: `/gallery-images//${file}` };
+    return { original: `/gallery-images/${file}` };
   });
 
   return {
@@ -30,7 +30,7 @@ const Gallery: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   const [fullImage, setFullImage] = useState<string>(
     filesPath[0].original || '1'
   );
-  const [isActive, toggleActive] = useHashRouteToggle('#image');
+  const [showFullImage, setShowFullImage] = useHashRouteToggle('#image');
 
   return (
     <>
@@ -41,20 +41,20 @@ const Gallery: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           filesPath={filesPath}
           callBackFn={(target: string) => {
             setFullImage(target);
-            toggleActive(true);
+            setShowFullImage(true);
           }}></GalleryImageList>
         <AnimatePresence>
-          {isActive && <FullImageView image={fullImage}></FullImageView>}
+          {showFullImage && <FullImageView image={fullImage}></FullImageView>}
         </AnimatePresence>
         <AnimatePresence>
-          {isActive && (
+          {showFullImage && (
             <motion.div
               className='fixed left-0 top-0 z-10 h-screen w-screen bg-primary-theme-bg/80 backdrop-blur-md'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => {
-                toggleActive(false);
+                setShowFullImage(false);
               }}
               transition={{ duration: 0.2, ease: 'easeInOut' }}></motion.div>
           )}
