@@ -41,7 +41,7 @@ const HeadComponent: FC<{ pageTitle?: string }> = ({ pageTitle }) => {
       />
       <meta property='og:url' content='https://prashantrahul.com' />
 
-      <meta content='#0c1d37' data-react-helmet='true' name='theme-color' />
+      <meta content='#1df2dd' data-react-helmet='true' name='theme-color' />
     </Head>
   );
 };
