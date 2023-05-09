@@ -5,7 +5,7 @@ const schema = z.object({
 });
 
 const expectedEnv = {
-  GITHUB_GRAPHQL_API_KEY: process.env._GITHUB_GRAPHQL_API_KEY,
+  _GITHUB_GRAPHQL_API_KEY: process.env._GITHUB_GRAPHQL_API_KEY,
 };
 
 const _env = schema.safeParse(expectedEnv);
