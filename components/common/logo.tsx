@@ -49,7 +49,7 @@ const LogoSvg: FC<{ variant: 'preloader' | 'page' }> = ({
             ? variantsForHex.preloader
             : variantsForHex.page
         }
-        d='m0 92.375 46.188-80h92.378l46.185 80-46.185 80H46.188L0 92.375z'
+        d='m0.2 92.375 46.188-80h92.378l46.185 80-46.185 80H46.188L0 92.900z'
         style={{
           fill: 'transparent',
           stroke: '#1df2dd',
