@@ -23,7 +23,7 @@ const GalleryImageList: FC<{
       className='max-w-5xl'>
       <div className='mb-8 px-2 sm:mb-8 sm:px-2 xl:px-0'>
         <span className='font-archivo-narrow text-3xl text-primary-theme-white-100 sm:text-4xl lg:text-5xl xl:text-6xl'>
-          Some photos which I have taken
+          Some photos I have taken
         </span>
       </div>
 
