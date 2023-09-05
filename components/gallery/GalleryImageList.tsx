@@ -6,8 +6,7 @@ const GalleryImageList: FC<{
   filesPath: Array<{
     original: string;
   }>;
-  callBackFn: (target: string) => void;
-}> = ({ filesPath, callBackFn }) => {
+}> = ({ filesPath }) => {
   const ArrayChunks = chunkArrayInGroups<{ original: string }>(filesPath, 3);
 
   return (
@@ -45,13 +44,10 @@ const GalleryImageList: FC<{
                       delay: (imageIndex * chunkIndex) / 8,
                       ease: 'easeInOut',
                     }}
-                    onClick={() => {
-                      callBackFn(eachImage.original);
-                    }}
                     className=''
                     key={`${chunkIndex}${imageIndex}`}>
                     <img
-                      className='h-full w-full cursor-pointer rounded-md border border-primary-theme-white-200/50 object-cover sm:border-primary-theme-white-200/30 md:rounded-xl'
+                      className='h-full w-full rounded-md border border-primary-theme-white-200/50 object-cover sm:border-primary-theme-white-200/30 md:rounded-xl'
                       src={eachImage.original}
                       alt='Image'></img>
                   </motion.div>
