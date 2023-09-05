@@ -12,7 +12,7 @@ const Repo: FC<{ repo: TRepo; index: number }> = ({ repo, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index / 10 }}
-      className='group min-w-full max-w-[30rem] rounded-md bg-primary-theme-bg-50 px-5 py-7 transition-colors duration-300 hover:bg-primary-theme-bg-40 sm:px-7'>
+      className='group min-w-full max-w-[30rem] rounded-md bg-primary-theme-bg-50/40 px-5 py-7  transition-colors duration-300 hover:bg-primary-theme-bg-40/40 hover:outline hover:outline-1 hover:outline-primary-theme-cyan-100/5 sm:px-7'>
       <Link href={currentRepo.url} passHref={true} target='_blank'>
         <div>
           <h1 className='flex items-center gap-2'>
