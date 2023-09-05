@@ -39,7 +39,10 @@ export default function App({ Component, pageProps }: AppProps) {
           }}>
           <Component {...pageProps} />
         </motion.div>
-        <CustomCursor key={'customCursor'}></CustomCursor>
+
+        {router.asPath.toLocaleLowerCase() !== '/' && (
+          <CustomCursor key={'customCursor'}></CustomCursor>
+        )}
       </AnimatePresence>
     </>
   );
