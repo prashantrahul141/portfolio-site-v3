@@ -4,7 +4,6 @@ import GalleryImageList from '@/components/gallery/GalleryImageList';
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import path from 'path';
 import fsPromises from 'fs/promises';
-import { AnimatePresence } from 'framer-motion';
 
 export const getStaticProps: GetStaticProps<{
   filesPath: Array<{ original: string }>;
@@ -26,11 +25,9 @@ const Gallery: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   return (
     <>
       <HeadComponent pageTitle='Gallery'></HeadComponent>
-      <div className='min-w-screen flex min-h-screen items-start justify-center bg-primary-theme-bg pt-24 sm:pt-32'>
+      <div className='min-w-screen flex min-h-screen items-start justify-center bg-primary-theme-bg py-24 sm:pt-32'>
         <NavigationBar defaultValue={2} />
         <GalleryImageList filesPath={filesPath}></GalleryImageList>
-        <AnimatePresence></AnimatePresence>
-        <AnimatePresence></AnimatePresence>
       </div>
     </>
   );
