@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 import CustomCursor from '@/components/common/customCursor';
+import useIsMobile from '@/hooks/useIsMobile';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -13,6 +14,8 @@ export default function App({ Component, pageProps }: AppProps) {
     }
     return router.asPath;
   };
+
+  const isMobile = useIsMobile();
 
   return (
     <>
@@ -40,7 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </motion.div>
 
-        {router.asPath.toLocaleLowerCase() !== '/' && (
+        {router.asPath.toLocaleLowerCase() !== '/' && !isMobile && (
           <CustomCursor key={'customCursor'}></CustomCursor>
         )}
       </AnimatePresence>
