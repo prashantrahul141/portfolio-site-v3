@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
+import CustomCursor from '@/components/common/customCursor';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -38,6 +39,7 @@ export default function App({ Component, pageProps }: AppProps) {
           }}>
           <Component {...pageProps} />
         </motion.div>
+        <CustomCursor key={'customCursor'}></CustomCursor>
       </AnimatePresence>
     </>
   );
