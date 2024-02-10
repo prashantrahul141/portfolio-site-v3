@@ -28,8 +28,9 @@ const MainInfo: FC = () => {
         <div className='mt-4'>
           <p className='max-w-lg font-sans text-sm tracking-wide text-primary-theme-white-200 sm:text-base'>
             I am a Software Developer, specializing in building Modern, Robust,
-            Full-Stack Web Applications. I also make Games, Desktop Applications
-            and Dev-Tools.
+            Full-Stack Web Applications. I also work with/on Compilers,
+            Interpreters, Graphics APIs, Games, Desktop Applications and
+            Dev-Tools.
           </p>
         </div>
       </div>
