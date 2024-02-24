@@ -39,7 +39,7 @@ const CustomCursor = () => {
 
   return (
     <motion.div
-      className='pointer-events-none fixed left-0 top-0 h-3 w-3 rounded-full bg-primary-theme-white-100'
+      className='pointer-events-none fixed left-0 top-0 z-50 h-3 w-3 rounded-full bg-primary-theme-white-100'
       animate={{
         x: mousePos.x - cursorWidth,
         y: mousePos.y - cursorWidth,
