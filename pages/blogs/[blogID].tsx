@@ -1,4 +1,4 @@
-import blogsJson from '../../../public/blogs/blogs.json';
+import blogsJson from '../../public/blogs/blogs.json';
 import type {
   NextPage,
   GetStaticProps,
