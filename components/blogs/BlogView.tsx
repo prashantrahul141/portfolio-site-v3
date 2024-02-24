@@ -7,7 +7,7 @@ import Markdown from 'react-markdown';
 
 const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
   return (
-    <div className=''>
+    <div className='mb-12'>
       <div className='items-center justify-center px-2'>
         <Markdown
           children={blog.fileContent}
