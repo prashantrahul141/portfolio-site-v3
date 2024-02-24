@@ -1,32 +1,41 @@
 import HeadComponent from '@/components/common/HeadComponent';
-import Logo from '@/components/common/logo';
-import type { NextPage } from 'next';
-import Link from 'next/link';
+import NavigationBar from '@/components/common/NavigationBar/NavigationBar';
+import MainInfo from '@/components/home/MainInfo';
+import ProjectsInfo from '@/components/home/ProjectsInfo';
+import { graphql } from '@octokit/graphql';
+import { env } from '@/env.mjs';
+import { GRAPH_QL_QUERY } from '@/utils/constants';
 
-export const getStaticProps = () => {
+import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
+import type { graphqlResponse } from '@/utils/types';
+import ContactInfo from '@/components/home/ContactInfo';
+
+export const getStaticProps: GetStaticProps<{
+  ghResponse: graphqlResponse;
+}> = async () => {
+  const ghResponse: graphqlResponse = await graphql(GRAPH_QL_QUERY, {
+    headers: {
+      authorization: `bearer ${env._GITHUB_GRAPHQL_API_KEY}`,
+    },
+  });
+
   return {
-    props: {},
+    props: { ghResponse },
   };
 };
 
-const Landing: NextPage = () => {
+const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  ghResponse,
+}) => {
   return (
     <>
       <HeadComponent></HeadComponent>
-      <div className='flex h-screen w-screen flex-col items-center justify-center gap-12 bg-black'>
-        <div className=''>
-          <div className='h-20 w-20'>
-            <Logo variant='preloader'></Logo>
-          </div>
-        </div>
-        <Link href={'/home'}>
-          <button className='animate-bounce-slow rounded border border-primary-theme-white-200 px-2 py-1  font-inconsolata text-xl tracking-wide text-primary-theme-white-100/90 transition-all duration-500 ease-in-out hover:border-primary-theme-white-100 hover:text-primary-theme-white-50'>
-            Explore
-          </button>
-        </Link>
-      </div>
+      <NavigationBar defaultValue={0} />
+      <MainInfo></MainInfo>
+      <ProjectsInfo ghResponse={ghResponse}></ProjectsInfo>
+      <ContactInfo></ContactInfo>
     </>
   );
 };
 
-export default Landing;
+export default Home;
