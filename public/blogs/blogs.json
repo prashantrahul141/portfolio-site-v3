@@ -7,6 +7,12 @@
       "Date": "2023-05-08",
       "File": "001.md"
     }, 
+    {
+      "id": "1",
+      "Title": "Making a Brainfuck compiler in Rust.",
+      "Subtext": "I will be trying to write a Brainfuck compiler in Rust.",
+      "Date": "2024-02-24",
+      "File": "./002/002.md"
     }
   ]
 }
