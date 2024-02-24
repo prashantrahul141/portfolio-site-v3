@@ -1,7 +1,7 @@
 const navigationOptions = [
-  { id: 0, text: 'Home', link: '/home/' },
-  { id: 1, text: 'Blogs', link: '/home/blogs' },
-  { id: 2, text: 'Gallery', link: '/home/gallery' },
+  { id: 0, text: 'Home', link: '/' },
+  { id: 1, text: 'Blogs', link: '/blogs' },
+  { id: 2, text: 'Gallery', link: '/gallery' },
 ] as const;
 
 export { navigationOptions };
