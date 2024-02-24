@@ -8,14 +8,14 @@ import Markdown from 'react-markdown';
 const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
   return (
     <div className='mb-12'>
-      <div className='items-center justify-center px-2'>
+      <div className='px-2'>
         <Markdown
           children={blog.fileContent}
           components={{
             p(props) {
               const { children } = props;
               return (
-                <p className='py-1 text-base text-primary-theme-white-50'>
+                <p className='text-balance py-1 text-base text-primary-theme-white-50'>
                   {children}
                 </p>
               );
@@ -57,7 +57,7 @@ const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
               const { href } = props;
               return (
                 <a
-                  className='text-primary-theme-cyan-200/90 underline hover:text-primary-theme-cyan-200'
+                  className='text-wrap text-primary-theme-cyan-200/90 underline hover:text-primary-theme-cyan-200'
                   href={href}>
                   {href}
                 </a>
@@ -93,7 +93,7 @@ const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
             code(props) {
               const { children } = props;
               return (
-                <div className='mx-2 my-6 rounded-md border border-primary-theme-white-50/10 p-2 text-primary-theme-white-200'>
+                <div className='mx-2 my-6 overflow-auto rounded-md border border-primary-theme-white-50/10 p-2 text-primary-theme-white-200'>
                   <code>{children}</code>
                 </div>
               );
