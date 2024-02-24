@@ -12,14 +12,14 @@ module.exports = {
     extend: {
       colors: {
         'primary-theme': {
-          bg: '#0c1d37',
-          'bg-50': '#0e2343',
-          'bg-40': '#112a4e',
-          'cyan-100': '#1df2dd',
-          'cyan-200': '#21a6a6',
-          'white-50': '#E9EDFB',
-          'white-100': '#ccd6f6',
-          'white-200': '#8892b0',
+          bg: '#1d2021',
+          'bg-50': '#262a2b',
+          'bg-40': '#222526',
+          'cyan-100': '#fff',
+          'cyan-200': '#e1e1e1',
+          'white-50': '#d1d1d1',
+          'white-100': '#ccc',
+          'white-200': '#a9a9a9',
           'repo-100': '#F8D866',
         },
       },
