@@ -57,7 +57,7 @@ const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
               const { href } = props;
               return (
                 <a
-                  className='text-primary-theme-cyan-200/90 hover:text-primary-theme-cyan-200'
+                  className='text-primary-theme-cyan-200/90 underline hover:text-primary-theme-cyan-200'
                   href={href}>
                   {href}
                 </a>
@@ -85,7 +85,7 @@ const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
                 <img
                   alt={alt || 'Image'}
                   src={`/blogs/${blog.File.split('/')[1]}/${src || ''}`}
-                  className='py-6'
+                  className='my-6 rounded-lg'
                 />
               );
             },
