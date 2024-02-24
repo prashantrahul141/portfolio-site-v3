@@ -11,8 +11,8 @@ const SmallBlogView: FC<{ blog: TBlog }> = ({ blog }) => {
   } ${date.getMonth()}, ${date.getFullYear()}`;
 
   return (
-    <Link href={`/home/blogs/${blog.id}`} className=''>
-      <div className='group mb-4 min-w-full  rounded-md bg-primary-theme-bg-50 px-4 py-6 transition-colors  duration-300 hover:bg-primary-theme-bg-40 sm:px-6'>
+    <Link href={`/blogs/${blog.id}`} className=''>
+      <div className='group mb-4 min-w-full  rounded-md bg-primary-theme-bg-50/30 px-4 py-6 transition-colors  duration-300 hover:bg-primary-theme-bg-40/40 sm:px-6'>
         <div className='pb-2'>
           <h1 className='flex items-center'>
             <span className='font-inconsolata text-base leading-snug tracking-wide text-primary-theme-cyan-100 transition-colors duration-500 group-hover:text-primary-theme-cyan-100 sm:text-lg sm:text-primary-theme-cyan-100/80'>

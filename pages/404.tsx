@@ -23,7 +23,7 @@ const FourZeroFour: NextPage = () => {
           404 - Page not found.
         </div>
         <div className='font-archivo-narrow text-lg tracking-wide sm:text-xl md:text-2xl'>
-          <Link href={'/home'}>
+          <Link href={'/'}>
             <span className='text-primary-theme-white-200'>
               prashantrahul.com/
             </span>
@@ -32,7 +32,7 @@ const FourZeroFour: NextPage = () => {
           <span className='text-primary-theme-white-50'>&nbsp;!? 🤨</span>
         </div>
         <div className='font-inconsolata text-2xl tracking-wide text-primary-theme-cyan-100'>
-          <Link href={'/home'}>
+          <Link href={'/'}>
             <button className='animate-bounce-slow rounded border border-primary-theme-white-200 px-2 py-1  font-inconsolata text-xl tracking-wide text-primary-theme-white-100/90 transition-all duration-500 ease-in-out hover:border-primary-theme-white-100 hover:text-primary-theme-white-50'>
               Home
             </button>
