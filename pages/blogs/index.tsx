@@ -6,6 +6,7 @@ import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import type { TBlog } from '@/utils/types';
 
 export const getStaticProps: GetStaticProps<{ blogs: Array<TBlog> }> = () => {
+  blogs.blogs.reverse();
   return {
     props: blogs,
   };
