@@ -83,6 +83,7 @@ const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
               const { alt, src } = props;
               return (
                 <img
+                  loading='lazy'
                   alt={alt || 'Image'}
                   src={`/blogs/${blog.File.split('/')[1]}/${src || ''}`}
                   className='my-6 rounded-lg'
