@@ -1,13 +1,16 @@
 import Head from 'next/head';
 import type { FC } from 'react';
 
-const HeadComponent: FC<{ pageTitle?: string }> = ({ pageTitle }) => {
+const HeadComponent: FC<{ pageTitle?: string; description?: string }> = ({
+  pageTitle,
+  description,
+}) => {
   return (
     <Head>
       {pageTitle === undefined ? (
         <title>{`Prashant Rahul`}</title>
       ) : (
-        <title>{`Prashant Rahul | ${pageTitle}`}</title>
+        <title>{`${pageTitle} | Prashant Rahul`}</title>
       )}
 
       <meta
@@ -22,7 +25,10 @@ const HeadComponent: FC<{ pageTitle?: string }> = ({ pageTitle }) => {
       <meta name='twitter:site' content='@prashantrahul' />
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:title' content='Prashant Rahul' />
-      <meta name='twitter:description' content='My portfolio website.' />
+      <meta
+        name='twitter:description'
+        content={description ? description : 'My portfolio site'}
+      />
       <meta property='twitter:domain' content='prashantrahul.com' />
       <meta property='twitter:url' content='https://prashantrahul.com' />
 
@@ -37,7 +43,7 @@ const HeadComponent: FC<{ pageTitle?: string }> = ({ pageTitle }) => {
       <meta
         property='og:description'
         charSet='UTF-8'
-        content='My portfolio website.'
+        content={description ? description : 'My portfolio site.'}
       />
       <meta property='og:url' content='https://prashantrahul.com' />
 
