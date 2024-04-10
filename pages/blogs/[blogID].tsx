@@ -48,7 +48,9 @@ const BlogPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   return (
     <>
-      <HeadComponent pageTitle={blog.Title}></HeadComponent>
+      <HeadComponent
+        pageTitle={blog.Title}
+        description={blog.Subtext}></HeadComponent>
       <div className='min-w-screen flex min-h-screen items-start justify-center bg-primary-theme-bg pt-24 sm:pt-32'>
         <NavigationBar defaultValue={1} />
         <motion.div
