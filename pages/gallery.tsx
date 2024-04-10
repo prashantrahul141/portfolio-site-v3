@@ -24,7 +24,9 @@ const Gallery: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   return (
     <>
-      <HeadComponent pageTitle='Gallery'></HeadComponent>
+      <HeadComponent
+        pageTitle='Gallery'
+        description='Some photos which I have clicked'></HeadComponent>
       <div className='min-w-screen flex min-h-screen items-start justify-center py-24 sm:pt-32'>
         <NavigationBar defaultValue={2} />
         <GalleryImageList filesPath={filesPath}></GalleryImageList>
