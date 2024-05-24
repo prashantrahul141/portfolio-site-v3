@@ -7,7 +7,7 @@ const BackgroundBlob = () => {
       initial={{ rotate: 0 }}
       animate={{ rotate: 360 }}
       transition={{ repeat: 999, duration: 5, ease: 'linear' }}
-      className='fixed left-1/4 top-1/3 -z-10 h-60 w-60 rounded-[90%] bg-gradient-to-tr from-primary-theme-cyan-100 to-primary-theme-white-50/40 opacity-40 blur-3xl md:left-1/4 md:h-96 md:w-96'></motion.div>
+      className='fixed left-1/4 top-1/3 -z-10 -ml-12 mt-4 h-60 w-60 rounded-[90%] bg-gradient-to-tr from-primary-theme-cyan-100 to-primary-theme-white-50/40 opacity-40 blur-3xl md:left-1/4 md:h-96 md:w-96 lg:left-1/4 lg:top-1/4'></motion.div>
   );
 };
 
