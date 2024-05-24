@@ -14,7 +14,7 @@ const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
 
   return (
     <>
-      <nav className='flex w-full items-center justify-end bg-primary-theme-bg/80 p-3 backdrop-blur-md'>
+      <nav className='flex w-full items-center justify-end bg-primary-theme-bg/70 p-3 backdrop-blur-md'>
         <div className='flex h-full flex-grow items-center justify-start pl-3'>
           <Link href={'/'} className='h-12 w-12 pt-1'>
             <LogoSvg variant='page'></LogoSvg>
