@@ -12,14 +12,14 @@ module.exports = {
     extend: {
       colors: {
         'primary-theme': {
-          bg: '#1d2021',
-          'bg-50': '#262a2b',
-          'bg-40': '#222526',
-          'cyan-100': '#fff',
-          'cyan-200': '#e1e1e1',
-          'white-50': '#d1d1d1',
-          'white-100': '#ccc',
-          'white-200': '#a9a9a9',
+          bg: '#000',
+          'bg-50': '#0A0A0A', // main background.
+          'bg-40': '#222526', // secondary background.
+          'cyan-100': '#EDEDED',
+          'cyan-200': '#52A8FF', // for links
+          'white-50': '#EDEDED', // blog text
+          'white-100': '#EDEDED', // main text.
+          'white-200': '#A1A1A1', // secondary text.
           'repo-100': '#F8D866',
         },
       },
