@@ -12,7 +12,7 @@ visit : <a href="https://prashantrahul.com" target="_blank"> **prashantrahul.com
 </a>
 
 <p align="center">
-    <img width="100%" src="https://github.com/prashantrahul141/prashantrahul141.github.io/blob/main/public/meta/demo.png?raw=true" alt="Site Preview">
+    <img width="100%" src="https://github.com/prashantrahul141/prashantrahul141.github.io/blob/main/public/meta/demo.webp?raw=true" alt="Site Preview">
 </p>
 
 ## Building from source
