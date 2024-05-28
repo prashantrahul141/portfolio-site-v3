@@ -109,4 +109,4 @@ export const skillsMap: TSkills = [
       },
     ],
   },
-] as const;
+];
