@@ -9,6 +9,7 @@ import { GRAPH_QL_QUERY } from '@/utils/constants';
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import type { graphqlResponse } from '@/utils/types';
 import ContactInfo from '@/components/home/ContactInfo';
+import SkillsInfo from '@/components/home/SkillsInfo';
 
 export const getStaticProps: GetStaticProps<{
   ghResponse: graphqlResponse;
@@ -29,11 +30,12 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   return (
     <>
-      <HeadComponent></HeadComponent>
+      <HeadComponent />
       <NavigationBar defaultValue={0} />
-      <MainInfo></MainInfo>
-      <ProjectsInfo ghResponse={ghResponse}></ProjectsInfo>
-      <ContactInfo></ContactInfo>
+      <MainInfo />
+      <SkillsInfo />
+      <ProjectsInfo ghResponse={ghResponse} />
+      <ContactInfo />
     </>
   );
 };
