@@ -11,8 +11,8 @@ import type { IParamsBlog } from '@/utils/types';
 import HeadComponent from '@/components/common/HeadComponent';
 import NavigationBar from '@/components/common/NavigationBar/NavigationBar';
 import BlogView from '@/components/blogs/BlogView';
-import path from 'path';
-import fsPromises from 'fs/promises';
+import path from 'node:path';
+import fsPromises from 'node:fs/promises';
 import { motion } from 'framer-motion';
 
 export const getStaticPaths: GetStaticPaths = () => {
@@ -48,9 +48,7 @@ const BlogPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   return (
     <>
-      <HeadComponent
-        pageTitle={blog.Title}
-        description={blog.Subtext}></HeadComponent>
+      <HeadComponent pageTitle={blog.Title} description={blog.Subtext} />
       <div className='min-w-screen flex min-h-screen items-start justify-center bg-primary-theme-bg pt-24 sm:pt-32'>
         <NavigationBar defaultValue={1} />
         <motion.div
@@ -59,7 +57,7 @@ const BlogPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.4, ease: 'easeInOut' }}
           className='w-full max-w-5xl px-2'>
-          <BlogView blog={blog}></BlogView>
+          <BlogView blog={blog} />
         </motion.div>
       </div>
     </>

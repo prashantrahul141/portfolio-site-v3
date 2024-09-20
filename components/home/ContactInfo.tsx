@@ -37,7 +37,7 @@ const ContactInfo: FC = () => {
             className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-[.20rem] hover:text-primary-theme-cyan-100'
             target='_blank'>
             <span>
-              <FillGithubIcon></FillGithubIcon>
+              <FillGithubIcon />
             </span>
           </Link>
 
@@ -47,7 +47,7 @@ const ContactInfo: FC = () => {
             className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-[.20rem] hover:text-primary-theme-cyan-100'
             target='_blank'>
             <span>
-              <FillLinkedInIcon></FillLinkedInIcon>
+              <FillLinkedInIcon />
             </span>
           </Link>
 
@@ -57,7 +57,7 @@ const ContactInfo: FC = () => {
             className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-[.20rem] hover:text-primary-theme-cyan-100'
             target='_blank'>
             <span>
-              <FillTwitterIcon></FillTwitterIcon>
+              <FillTwitterIcon />
             </span>
           </Link>
 
@@ -67,7 +67,7 @@ const ContactInfo: FC = () => {
             className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-[.20rem] hover:text-primary-theme-cyan-100'
             target='_blank'>
             <span>
-              <FillInstagramIcon></FillInstagramIcon>
+              <FillInstagramIcon />
             </span>
           </Link>
         </div>

@@ -31,7 +31,7 @@ const GalleryImageList: FC<{
         {ArrayChunks.map((eachChunk, chunkIndex) => {
           return (
             // column
-            <div className='flex flex-col gap-3' key={chunkIndex}>
+            <div className='flex flex-col gap-3' key={eachChunk[0].original}>
               {eachChunk.map((eachImage, imageIndex) => {
                 return (
                   // photo
@@ -45,11 +45,12 @@ const GalleryImageList: FC<{
                       ease: 'easeInOut',
                     }}
                     className=''
-                    key={`${chunkIndex}${imageIndex}`}>
+                    key={`${eachImage.original}`}>
                     <img
                       className='h-full w-full rounded-md border border-primary-theme-white-200/50 object-cover sm:border-primary-theme-white-200/30 md:rounded-xl'
                       src={eachImage.original}
-                      alt='Image'></img>
+                      alt='gallery {}'
+                    />
                   </motion.div>
                 );
               })}

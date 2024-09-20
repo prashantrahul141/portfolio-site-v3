@@ -17,15 +17,16 @@ const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
       <nav className='flex w-full items-center justify-end bg-primary-theme-bg/70 p-3 backdrop-blur-md'>
         <div className='flex h-full flex-grow items-center justify-start pl-3'>
           <Link href={'/'} className='h-12 w-12 pt-1'>
-            <LogoSvg variant='page'></LogoSvg>
+            <LogoSvg variant='page' />
           </Link>
         </div>
         <button
+          type='button'
           className='h-full pr-2'
           onClick={() => {
             setOpenMenu(true);
           }}>
-          <OutlineMenu className='h-12 text-primary-theme-cyan-100'></OutlineMenu>
+          <OutlineMenu className='h-12 text-primary-theme-cyan-100' />
         </button>
       </nav>
 
@@ -41,7 +42,8 @@ const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
           transition={{
             duration: 0.1,
           }}
-          className='fixed left-0 top-0 z-10 h-screen w-screen backdrop-blur-[2px]'></motion.div>
+          className='fixed left-0 top-0 z-10 h-screen w-screen backdrop-blur-[2px]'
+        />
       )}
       <AnimatePresence>
         {openMenu && (
@@ -54,11 +56,12 @@ const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
             className='fixed top-0 z-20 h-screen w-[70vw] bg-primary-theme-bg-50 shadow-mobileNavBar'>
             <div className='flex h-14 w-full items-center justify-end px-8 py-10'>
               <button
+                type='button'
                 className='flex  items-center justify-end'
                 onClick={() => {
                   setOpenMenu(false);
                 }}>
-                <OutlineCross className='h-6 text-primary-theme-cyan-100'></OutlineCross>
+                <OutlineCross className='h-6 text-primary-theme-cyan-100' />
               </button>
             </div>
             <div className='mt-12'>
@@ -66,6 +69,9 @@ const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
                 const isActive = defaultValue === option.id;
                 return (
                   <div
+                    onKeyDown={() => {
+                      setOpenMenu(false);
+                    }}
                     onClick={() => {
                       setOpenMenu(false);
                     }}

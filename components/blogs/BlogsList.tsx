@@ -53,7 +53,7 @@ const BlogsList: FC<{ blogs: Array<TBlog> }> = ({ blogs }) => {
 
       <div className='flex w-full flex-col gap-4'>
         {blogs.map((blog) => {
-          return <SmallBlogView key={blog.id} blog={blog}></SmallBlogView>;
+          return <SmallBlogView key={blog.id} blog={blog} />;
         })}
       </div>
     </motion.div>

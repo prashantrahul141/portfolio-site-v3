@@ -17,7 +17,7 @@ const Repo: FC<{ repo: TRepo; index: number }> = ({ repo, index }) => {
         <div>
           <h1 className='flex items-center gap-2'>
             <span className='text-sm text-primary-theme-repo-100'>
-              <OutlineGHRepo></OutlineGHRepo>
+              <OutlineGHRepo />
             </span>
             <span className='font-inconsolata text-base capitalize tracking-wide text-primary-theme-cyan-100 transition-colors duration-500 group-hover:text-primary-theme-cyan-100 sm:text-primary-theme-cyan-100/90'>
               {currentRepo.name}
@@ -34,7 +34,7 @@ const Repo: FC<{ repo: TRepo; index: number }> = ({ repo, index }) => {
         <div className='flex -translate-y-8 flex-col justify-end pl-1'>
           <span className='flex items-center gap-5 font-inconsolata text-primary-theme-white-100 transition-colors duration-500 group-hover:text-primary-theme-white-100 sm:text-primary-theme-white-100/70'>
             <span className='flex items-center gap-1 text-sm '>
-              <OutlineStar></OutlineStar>
+              <OutlineStar />
               <span>{currentRepo.stargazerCount}</span>
             </span>
             <span className='text-sm tracking-wide'>
@@ -63,7 +63,7 @@ const ProjectsInfo: FC<{ ghResponse: graphqlResponse }> = ({ ghResponse }) => {
         </div>
         <div className='grid w-full gap-2 sm:grid-cols-2 '>
           {ghResponse.user.pinnedItems.edges.map((repo, index) => {
-            return <Repo key={index} repo={repo} index={index}></Repo>;
+            return <Repo key={repo.node.url} repo={repo} index={index} />;
           })}
         </div>
       </div>

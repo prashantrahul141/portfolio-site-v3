@@ -10,7 +10,6 @@ const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
     <div className='mb-12'>
       <div className='px-2'>
         <Markdown
-          children={blog.fileContent}
           components={{
             p(props) {
               const { children } = props;
@@ -99,8 +98,9 @@ const BlogView: FC<{ blog: TBlog & { fileContent: string } }> = ({ blog }) => {
                 </div>
               );
             },
-          }}
-        />
+          }}>
+          {blog.fileContent}
+        </Markdown>
       </div>
     </div>
   );

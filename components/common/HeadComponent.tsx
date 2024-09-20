@@ -12,14 +12,12 @@ const HeadComponent: FC<{ pageTitle?: string; description?: string }> = ({
   return (
     <Head>
       {pageTitle === undefined ? (
-        <title>{`Prashant Rahul`}</title>
+        <title>Prashant Rahul</title>
       ) : (
         <title>{`${pageTitle} | Prashant Rahul`}</title>
       )}
 
-      <meta
-        name='viewport'
-        content='width=device-width, user-scalable=no'></meta>
+      <meta name='viewport' content='width=device-width, user-scalable=no' />
       <meta name='darkreader-lock' />
 
       <meta

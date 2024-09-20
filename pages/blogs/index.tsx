@@ -17,12 +17,10 @@ const Blogs: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }) => {
   return (
     <>
-      <HeadComponent
-        pageTitle='Blogs'
-        description='I write sometimes'></HeadComponent>
+      <HeadComponent pageTitle='Blogs' description='I write sometimes' />
       <div className='min-w-screen flex min-h-screen items-start justify-center pt-16'>
         <NavigationBar defaultValue={1} />
-        <BlogsList blogs={blogs}></BlogsList>
+        <BlogsList blogs={blogs} />
       </div>
     </>
   );

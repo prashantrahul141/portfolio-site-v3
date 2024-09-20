@@ -16,7 +16,7 @@ const NavigationBarLarge: FC<{ defaultValue: TNavigationOptionsID }> = ({
     <AnimatePresence>
       <nav className='flex h-fit w-full items-center bg-primary-theme-bg/60 text-white backdrop-blur-md'>
         <Link href={'/'} className='ml-16 aspect-square h-11'>
-          <Logo variant='page'></Logo>
+          <Logo variant='page' />
         </Link>
         <div className='flex flex-grow items-center justify-end gap-7 py-7 pr-16'>
           {navigationOptions.map((option) => (
@@ -25,6 +25,7 @@ const NavigationBarLarge: FC<{ defaultValue: TNavigationOptionsID }> = ({
               key={option.id}
               href={option.link}>
               <button
+                type='button'
                 className={`${
                   activeTab === option.id
                     ? 'text-primary-theme-cyan-100/100 hover:text-primary-theme-cyan-100/100'

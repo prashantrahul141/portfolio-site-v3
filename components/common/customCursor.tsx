@@ -49,7 +49,8 @@ const CustomCursor = () => {
         duration: 0.07,
         delay: 0,
         scale: { type: 'spring', duration: 0.4 },
-      }}></motion.div>
+      }}
+    />
   );
 };
 
