@@ -19,48 +19,44 @@ export const skillsMap: TSkills = [
     values: [
       {
         name: 'Rust',
-        icon: <skillIcons.RustLangIcon></skillIcons.RustLangIcon>,
+        icon: <skillIcons.RustLangIcon />,
       },
       {
-        name: 'Typescript',
-        icon: <skillIcons.TypescriptLangIcon></skillIcons.TypescriptLangIcon>,
-      },
-      {
-        name: 'Javascript',
-        icon: <skillIcons.JavascriptLangIcon></skillIcons.JavascriptLangIcon>,
+        name: 'Typescript/Javascript',
+        icon: <skillIcons.TypescriptLangIcon />,
       },
       {
         name: 'Go',
-        icon: <skillIcons.GoLangIcon></skillIcons.GoLangIcon>,
+        icon: <skillIcons.GoLangIcon />,
       },
       {
         name: 'C',
-        icon: <skillIcons.CLangIcon></skillIcons.CLangIcon>,
+        icon: <skillIcons.CLangIcon />,
       },
       {
         name: 'C++',
-        icon: <skillIcons.CPlusPlusLangIcon></skillIcons.CPlusPlusLangIcon>,
+        icon: <skillIcons.CPlusPlusLangIcon />,
       },
       {
         name: 'C#',
-        icon: <skillIcons.CSharpLangIcon></skillIcons.CSharpLangIcon>,
+        icon: <skillIcons.CSharpLangIcon />,
       },
 
       {
         name: 'Python',
-        icon: <skillIcons.PythonLangIcon></skillIcons.PythonLangIcon>,
+        icon: <skillIcons.PythonLangIcon />,
       },
       {
         name: 'Lua',
-        icon: <skillIcons.LuaLangIcon></skillIcons.LuaLangIcon>,
+        icon: <skillIcons.LuaLangIcon />,
       },
       {
         name: 'Bash',
-        icon: <skillIcons.BashLangIcon></skillIcons.BashLangIcon>,
+        icon: <skillIcons.BashLangIcon />,
       },
       {
         name: 'Kotlin',
-        icon: <skillIcons.KotlinLangIcon></skillIcons.KotlinLangIcon>,
+        icon: <skillIcons.KotlinLangIcon />,
       },
     ],
   },
@@ -68,44 +64,40 @@ export const skillsMap: TSkills = [
     groupName: 'Technologies',
     values: [
       {
+        name: 'Solid',
+        icon: <skillIcons.NextJsIcon />,
+      },
+      {
         name: 'Next',
-        icon: <skillIcons.NextJsIcon></skillIcons.NextJsIcon>,
+        icon: <skillIcons.NextJsIcon />,
       },
       {
         name: '.NET',
-        icon: <skillIcons.DotNetIcon></skillIcons.DotNetIcon>,
-      },
-      {
-        name: 'React',
-        icon: <skillIcons.ReactIcon></skillIcons.ReactIcon>,
+        icon: <skillIcons.DotNetIcon />,
       },
       {
         name: 'OpenGL',
-        icon: <skillIcons.OpenGlIcon></skillIcons.OpenGlIcon>,
+        icon: <skillIcons.OpenGlIcon />,
       },
       {
         name: 'Tailwindcss',
-        icon: <skillIcons.TailwindcssIcon></skillIcons.TailwindcssIcon>,
+        icon: <skillIcons.TailwindcssIcon />,
       },
       {
-        name: 'Git & Github',
-        icon: <skillIcons.GitIcon></skillIcons.GitIcon>,
-      },
-      {
-        name: 'Express',
-        icon: <skillIcons.ExpressIcon></skillIcons.ExpressIcon>,
+        name: 'Git',
+        icon: <skillIcons.GitIcon />,
       },
       {
         name: 'SQL',
-        icon: <skillIcons.PostgresIcon></skillIcons.PostgresIcon>,
+        icon: <skillIcons.PostgresIcon />,
       },
       {
         name: 'Threejs',
-        icon: <skillIcons.ThreejsIcon></skillIcons.ThreejsIcon>,
+        icon: <skillIcons.ThreejsIcon />,
       },
       {
-        name: 'SocketIO',
-        icon: <skillIcons.SocketIOIcon></skillIcons.SocketIOIcon>,
+        name: 'Sockets',
+        icon: <skillIcons.SocketIOIcon />,
       },
     ],
   },
