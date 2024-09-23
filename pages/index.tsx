@@ -33,8 +33,8 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       <HeadComponent />
       <NavigationBar defaultValue={0} />
       <MainInfo />
-      <SkillsInfo />
       <ProjectsInfo ghResponse={ghResponse} />
+      <SkillsInfo />
       <ContactInfo />
     </>
   );
