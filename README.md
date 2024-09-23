@@ -1,6 +1,6 @@
 <a href="https://prashantrahul.com" target="_blank">
 <p align="center">
-    <img width="100" src="https://github.com/prashantrahul141/prashantrahul141.github.io/blob/main/public/logo.png?raw=true" alt="Site Icon">
+    <img width="100" src="https://github.com/prashantrahul141/prashantrahul141.github.io/blob/main/public/logo.avif?raw=true" alt="Site Icon">
 </p>
 </a>
 
