@@ -65,7 +65,7 @@ export const skillsMap: TSkills = [
     values: [
       {
         name: 'Solid',
-        icon: <skillIcons.NextJsIcon />,
+        icon: <skillIcons.SolidIcon />,
       },
       {
         name: 'Next',
