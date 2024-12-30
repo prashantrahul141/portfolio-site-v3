@@ -1,10 +1,10 @@
+import { navigationOptions } from '@/utils/constantTSX';
+import type { TNavigationOptionsID } from '@/utils/types';
+import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
 import type { FC } from 'react';
 import { useState } from 'react';
 import { OutlineCross, OutlineMenu } from '../icons';
-import { motion, AnimatePresence } from 'framer-motion';
-import { navigationOptions } from '@/utils/constantTSX';
-import Link from 'next/link';
-import type { TNavigationOptionsID } from '@/utils/types';
 import LogoSvg from '../logo';
 
 const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
@@ -94,6 +94,15 @@ const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
                   </div>
                 );
               })}
+              <div className='flex w-full items-center justify-center py-6'>
+                <Link target='_blank' href={'/Prashant Rahul CV.pdf'}>
+                  <button
+                    type='button'
+                    className='flex w-fit items-center justify-center gap-2 rounded-md border border-primary-theme-bg-40 bg-primary-theme-bg-50/40 px-5 py-3 font-inconsolata text-xl text-primary-theme-white-50/70 transition-all duration-150 hover:bg-primary-theme-bg-40 hover:text-primary-theme-white-100 sm:px-7'>
+                    Resume
+                  </button>
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

@@ -1,9 +1,9 @@
 import { navigationOptions } from '@/utils/constantTSX';
+import type { TNavigationOptionsID } from '@/utils/types';
+import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
 import type { FC } from 'react';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-import type { TNavigationOptionsID } from '@/utils/types';
 import Logo from '../logo';
 
 const NavigationBarLarge: FC<{ defaultValue: TNavigationOptionsID }> = ({
@@ -46,6 +46,13 @@ const NavigationBarLarge: FC<{ defaultValue: TNavigationOptionsID }> = ({
               </button>
             </Link>
           ))}
+          <Link target='_blank' href={'/Prashant Rahul CV.pdf'}>
+            <button
+              type='button'
+              className='flex w-fit items-center justify-center gap-2 rounded-md border border-primary-theme-bg-40 bg-primary-theme-bg-50/40 p-1 px-4 font-inconsolata text-primary-theme-white-50/70 transition-all duration-150 hover:bg-primary-theme-bg-40 hover:text-primary-theme-white-100 sm:px-7'>
+              Resume
+            </button>
+          </Link>
         </div>
       </nav>
     </AnimatePresence>
