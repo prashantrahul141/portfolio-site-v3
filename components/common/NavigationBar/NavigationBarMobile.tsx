@@ -20,6 +20,16 @@ const NavigationBarMobile: FC<{ defaultValue: TNavigationOptionsID }> = ({
             <LogoSvg variant='page' />
           </Link>
         </div>
+        <Link
+          target='_blank'
+          className='h-min pr-4'
+          href={'/Prashant Rahul CV.pdf'}>
+          <button
+            type='button'
+            className='flex h-min w-fit items-center justify-center gap-2 rounded-md border border-primary-theme-bg-40 bg-primary-theme-bg-50/40 px-5 py-1 font-inconsolata text-base text-primary-theme-white-50/70 transition-all duration-150 hover:bg-primary-theme-bg-40 hover:text-primary-theme-white-100 sm:px-7'>
+            Resume
+          </button>
+        </Link>
         <button
           type='button'
           className='h-full pr-2'
