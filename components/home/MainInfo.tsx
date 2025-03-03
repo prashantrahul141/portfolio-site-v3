@@ -27,10 +27,9 @@ const MainInfo: FC = () => {
         </div>
         <div className='mt-4'>
           <p className='max-w-lg text-balance font-sans text-sm tracking-wide text-primary-theme-white-200 sm:text-base'>
-            I am a Software Developer working in a lot of fields with a
-            specialization in building Modern, Robust, Full-Stack Web
-            Experiences. I also work with/on Compilers, Interpreters, Emulators,
-            Graphics APIs, Games and Cross platform applications.
+            I am a software developer working in a lot of fields with a specialization
+            in building and tinkering compilers and interpreters. I also work on creating
+            full-stack web experiences, emulators, graphics APIs, games and cross platform applications.
           </p>
         </div>
       </div>
