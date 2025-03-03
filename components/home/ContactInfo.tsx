@@ -2,8 +2,8 @@ import type { FC } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
+  FillMailIcon,
   FillGithubIcon,
-  FillInstagramIcon,
   FillLinkedInIcon,
   FillTwitterIcon,
 } from '../common/icons';
@@ -25,12 +25,21 @@ const ContactInfo: FC = () => {
 
         <div className='w-full max-w-lg px-0 sm:px-2'>
           <span className='text-balance font-sans tracking-wide text-primary-theme-white-200'>
-            Although I&apos;m currently a student and not looking for any long
-            term commitment other than small projects, my inbox is always open!
+            You can contact me through any of these platforms
           </span>
         </div>
 
         <div className='mt-12 flex items-center justify-center gap-4'>
+          <Link
+            href={'mailto:prashantrahul141@protonmail.com'}
+            passHref={true}
+            className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-[.20rem] hover:text-primary-theme-cyan-100'
+            target='_blank'>
+            <span>
+              <FillMailIcon />
+            </span>
+          </Link>
+
           <Link
             href={'https://github.com/prashantrahul141'}
             passHref={true}
@@ -58,16 +67,6 @@ const ContactInfo: FC = () => {
             target='_blank'>
             <span>
               <FillTwitterIcon />
-            </span>
-          </Link>
-
-          <Link
-            href={'https://instagram.com/prashantrahul141'}
-            passHref={true}
-            className='flex h-12 w-12 items-center justify-center text-2xl text-primary-theme-white-100 transition-transform duration-500 hover:-translate-y-[.20rem] hover:text-primary-theme-cyan-100'
-            target='_blank'>
-            <span>
-              <FillInstagramIcon />
             </span>
           </Link>
         </div>
